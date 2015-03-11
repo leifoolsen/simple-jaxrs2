@@ -8,4 +8,5 @@ using Grizzly2 with JSON binding via MOXy.
 * Start Jetty: mvn exec:java
 * Application.wadl: http://localhost:8080/api/application.wadl
 * Example usage: http://localhost:8080/api/books
-* Open BookResourceTest.java to explore code
+* Import project into your favourite IDE
+* Open BookResourceTest.java to start exploring code
