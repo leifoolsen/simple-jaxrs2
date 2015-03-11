@@ -21,7 +21,8 @@ public class JettyStarter {
 
         URI applicationURI = UriBuilder.fromUri(server.getURI()).path(ApplicationConfig.APPLICATION_PATH).build();
         System.out.println(String.format("\nServer started with WADL available at "
-                + "%s/application.wadl\nHIT ENTER TO STOP IT ...", applicationURI.toString()));
+                + "%s/application.wadl\nExample usage: %s/books\n\nHIT ENTER TO STOP SERVER ...",
+                applicationURI.toString(), applicationURI.toString()));
 
         try {
             System.in.read();
