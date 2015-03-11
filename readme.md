@@ -3,7 +3,7 @@ Maven project demonstrating how to run a JAX-RS 2 project in Embedded Jetty-9 wi
 using Grizzly-2 with JSON binding via MOXy.
 
 ## Steps to run this project
-* Fork this repo
+* Download ZIP or Fork this repo
 * Build project: mvn clean install -U
 * Start Jetty: mvn exec:java
 * Application.wadl: http://localhost:8080/api/application.wadl
