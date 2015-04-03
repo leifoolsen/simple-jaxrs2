@@ -1,6 +1,5 @@
-package com.github.leifoolsen.simplejaxrs2.application;
+package com.github.leifoolsen.simplejaxrs2.rest.application;
 
-import org.glassfish.jersey.filter.LoggingFilter;
 import org.glassfish.jersey.server.ResourceConfig;
 import org.glassfish.jersey.server.ServerProperties;
 import org.slf4j.Logger;
@@ -36,7 +35,7 @@ public class ApplicationConfig extends ResourceConfig {
         SLF4JBridgeHandler.install();
 
         // Scans during deployment for JAX-RS components in packages
-        packages("com.github.leifoolsen.simplejaxrs2");
+        packages("com.github.leifoolsen.simplejaxrs2.rest");
 
 
         // Enables sending validation errors in response entity to the client.

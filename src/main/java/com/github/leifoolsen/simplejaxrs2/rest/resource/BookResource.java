@@ -1,4 +1,4 @@
-package com.github.leifoolsen.simplejaxrs2.resource;
+package com.github.leifoolsen.simplejaxrs2.rest.resource;
 
 import com.github.leifoolsen.simplejaxrs2.domain.Book;
 import com.github.leifoolsen.simplejaxrs2.repository.BookRepository;
@@ -152,7 +152,7 @@ public class BookResource {
                             .build()
             );
         }
-        return; // ==> Response.Status.NO_CONTENT
+        //return ==> Response.Status.NO_CONTENT
     }
 
     @GET
@@ -287,8 +287,7 @@ public class BookResource {
             } catch (ParseException e) {
                 try {
                     DateFormat df = new SimpleDateFormat("yyyy-MM-dd");
-                    Date date = df.parse(dateString);
-                    return date;
+                    return df.parse(dateString);
                 } catch (ParseException e2) {
                     //TODO: throw WebApplicationException ...
                     return null;
