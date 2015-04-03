@@ -1,7 +1,7 @@
 package com.github.leifoolsen.simplejaxrs2.main;
 
-import com.github.leifoolsen.simplejaxrs2.application.ApplicationConfig;
 import com.github.leifoolsen.simplejaxrs2.embeddedjetty.JettyFactory;
+import com.github.leifoolsen.simplejaxrs2.rest.application.ApplicationConfig;
 import com.google.common.base.MoreObjects;
 import com.google.common.primitives.Ints;
 import org.eclipse.jetty.server.Server;

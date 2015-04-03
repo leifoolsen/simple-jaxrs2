@@ -2,7 +2,10 @@ package com.github.leifoolsen.simplejaxrs2.domain;
 
 import com.google.common.base.MoreObjects;
 
-import javax.validation.*;
+import javax.validation.ConstraintViolation;
+import javax.validation.ConstraintViolationException;
+import javax.validation.Validation;
+import javax.validation.Validator;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Pattern;
 import javax.validation.constraints.Size;
@@ -66,9 +69,8 @@ public class Book {
 
         Book book = (Book) o;
 
-        if (!isbn.equals(book.isbn)) return false;
+        return isbn.equals(book.isbn);
 
-        return true;
     }
 
     @Override

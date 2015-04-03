@@ -1,4 +1,4 @@
-package com.github.leifoolsen.simplejaxrs2.resource;
+package com.github.leifoolsen.simplejaxrs2.rest.resource;
 
 import com.github.leifoolsen.simplejaxrs2.domain.Book;
 import com.github.leifoolsen.simplejaxrs2.embeddedjetty.JettyFactory;
@@ -19,14 +19,13 @@ import javax.ws.rs.core.Form;
 import javax.ws.rs.core.GenericType;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
-
 import java.util.GregorianCalendar;
 import java.util.List;
 
+import static org.hamcrest.Matchers.greaterThan;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertThat;
-import static org.hamcrest.Matchers.greaterThan;
 import static org.junit.Assert.assertTrue;
 
 public class BookResourceTest {
