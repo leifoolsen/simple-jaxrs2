@@ -73,6 +73,19 @@ public class BookResourceTest {
     }
 
     @Test
+    public void pingBoolShouldReturnTrue() {
+        final Response response = target
+                .path(BOOK_RESOURCE_PATH)
+                .path("ping-bool")
+                .request(MediaType.TEXT_PLAIN)
+                .get();
+
+        assertEquals(Response.Status.OK.getStatusCode(), response.getStatus());
+        Boolean bool = response.readEntity(Boolean.class);
+        assertEquals(bool.booleanValue(), true);
+    }
+
+    @Test
     public void createBook() {
         Book book = Book
             .with("9788202289331")

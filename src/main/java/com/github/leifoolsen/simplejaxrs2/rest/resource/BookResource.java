@@ -54,6 +54,13 @@ public class BookResource {
         return "Pong!"; // --> Response.Status.OK
     }
 
+    @GET
+    @Produces(MediaType.TEXT_PLAIN)
+    @Path("ping-bool")
+    public boolean pingBool() {
+        return true; // --> Response.Status.OK
+    }
+
     @POST
     @Consumes(MediaType.APPLICATION_JSON)
     public Response create(final Book book) {
